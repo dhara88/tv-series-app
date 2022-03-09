@@ -1,0 +1,45 @@
+.topnav {
+    padding: 6px 10px;
+  }
+  
+  .loader {
+      text-align: center;
+  }
+  
+  .bi-search{
+      color:white; 
+  }
+    
+  .btn{
+      margin-left: 5px;
+      border-color: white;
+  }
+  .card{
+      margin-top: 5px;
+      background-color: #c5163e;
+      width: 100%;
+  
+  }
+  
+  .card-header {
+      background-color: #76871e;
+      color: white;
+  }
+  
+  .carousel-caption{
+      top: 150px;
+      bottom: auto;
+      color: white;
+  }
+  
+  
+  .btn{
+      color: white;
+      margin-top: 5px;
+  
+  }
+  
+  .flex-container {
+      margin-top: 10px;
+  }
+  
