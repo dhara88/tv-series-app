@@ -27,7 +27,6 @@ export class DashboardComponent implements OnInit {
  
   
   filterDataByGenre(genre: string): Shows[] {
-    console.log("all",this.allShowsData)
     return this.allShowsData.filter(itemVal => itemVal.genres.indexOf(genre) >= 0);
   }
 

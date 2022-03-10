@@ -39,7 +39,6 @@ searchDetails(){
     },
     (error) => {
       this.hasError = true;
-      this.isLoading = false;
     },
     () => {
       this.isLoading = false;
@@ -60,7 +59,6 @@ searchDetails(){
         },
         (error) => {
           this.hasError = true;
-          this.isLoading = false;
         }, 
         () => {
           this.isLoading = false;
@@ -75,7 +73,6 @@ searchDetails(){
         },
         (error) => {
           this.hasError = true;
-          this.isLoading = false;
         }, 
         () => {
           this.isLoading = false;

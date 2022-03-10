@@ -5,10 +5,6 @@
   .loader {
       text-align: center;
   }
-  
-  .bi-search{
-      color:white; 
-  }
     
   .btn{
       margin-left: 5px;
@@ -30,13 +26,6 @@
       top: 150px;
       bottom: auto;
       color: white;
-  }
-  
-  
-  .btn{
-      color: white;
-      margin-top: 5px;
-  
   }
   
   .flex-container {
