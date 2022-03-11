@@ -1,6 +1,3 @@
-import { Rating } from "./rating";
-import { Image } from "./image";
-
 export interface Shows {
     id: number;
     url: string;
@@ -22,24 +19,33 @@ export interface Shows {
     summary: string;
     updated: number; 
     _links: Links;
-  }
+}
+
+export interface Rating {
+    average: number;
+}
+
+export interface Image {
+  medium: string;
+  original: string;
+}
 
 export interface Network {
     id: number;
     name: string;
     country: Country;
-  }
+}
 
 export interface Country {
     name: string;
     code: string;
     timezone: string;
-  }
+}
 
 export interface Links {
     self: Self;
     previousepisode: Self; 
-  }
+}
 
 export interface Self {
     href: string;
@@ -52,5 +58,5 @@ export interface Externals {
 
 export interface Schedule {
   time: string;
-  days: string[];
+  days: string[]; 
 }
