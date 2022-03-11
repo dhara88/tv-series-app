@@ -1,8 +1,8 @@
 # Tv Series App
 
-This project uses as a backend the [TV Maze API](https://www.tvmaze.com/api) to display popular TV series and its details.
+This project uses as a backend the [TV Maze API](https://www.tvmaze.com/api) to display popular TV series and user can see the details about the particular show as well as search a show using name.
 
-# How to install or run the project
+# How to install or run the application
 
 Before cloning the project make sure that you have installed Node and NPM latest stable versions. 
 
@@ -14,8 +14,17 @@ Before cloning the project make sure that you have installed Node and NPM latest
 * Run `ng test --code-coverage` to check code coverage in unit testing.
 * Run `ng build` to build the project 
 
+# Node Version
 
-# Technologies
+Node [v14.16.1]
 
-This project generated with Angular CLI version [12.0.5], Node [v14.16.1] and NPM [8.5.3].
+# NPM Version
+
+NPM [8.5.3]
+
+# Why used Angular12 ?
+
+This project generated with Angular CLI version [12.0.5],
 I choose Angular because I am more comfortable with this framework.
+Angular12 is A complete framework with elegant MVC architecture, Default Ivy renderer,faster build with compilation, large community support, great documenatation and easy to build single page application with different components. 
+
