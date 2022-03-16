@@ -45,8 +45,7 @@ describe('ShowDetailsComponent', () => {
     expect(component).toBeTruthy();
   });
  
-  it('should call dashboard page if search value is present in local storage', () => {
-    expect(localStorage.setItem('searchValue', 'drama'));
+  it('should call dashboard page', () => {
     component.goHome();
     component.backButtonText = "Go Dashboard";
     expect(router.navigate).toHaveBeenCalledWith(['/dashboard']);

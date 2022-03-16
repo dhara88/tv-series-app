@@ -15,7 +15,6 @@ export class ShowDetailsComponent implements OnInit {
   episodesDetails!:any;
   hasError = false;
   isLoading = false; 
-  searchValue!: string;
   backButtonText!:string;
   constructor(private route: ActivatedRoute, private router: Router,private apiService: ApiService) { }
 

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Shows } from '../models/show';
 import { ApiService } from '../service/api.service';
 
@@ -14,14 +13,12 @@ export class DashboardComponent implements OnInit {
   allShowsData: Shows[] = [];
   isLoadingIndicator: boolean = false;
   hasError: boolean = false;
-  searchVal!: any;
   searchResults: any = [];
   genre : any = ['Action','Comedy','Drama','Sports'];
 
-  constructor(private searchShowsService: ApiService,private apiService: ApiService,private router: Router) { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    localStorage.setItem("searchValue", '');
     this.getAllShows();  
   }
  
@@ -47,19 +44,10 @@ export class DashboardComponent implements OnInit {
       }
     );
   }
-
-  goToSearch(searchData: string) {
-  localStorage.setItem("searchValue", searchData);
-  if(localStorage.getItem("searchValue")?.length){
-    this.searchVal = localStorage.getItem("searchValue");
-    this.getShowsBySearch(this.searchVal);
-   }
-  }
-
   
-  getShowsBySearch(searchVal : any) {
+  getShowsBySearch(searchData : any) {
     this.isLoadingIndicator = true;
-    this.searchShowsService.searchSeries(searchVal).subscribe(
+    this.apiService.searchSeries(searchData).subscribe(
       (data: any) => {
         this.searchResults = data.map((item: any) => item.show);
         this.searchResults.sort((a: any, b: any) => a.rating.average > b.rating.average ? -1 : 1);

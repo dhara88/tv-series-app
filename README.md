@@ -24,7 +24,7 @@ NPM [8.5.3]
 
 # Why used Angular12 ?
 
-This project generated with Angular CLI version [12.0.5],
+This project generated with Angular CLI version [12.0.5] and unit test with jasmine and karma framework,
 I choose Angular because I am more comfortable with this framework.
 Angular12 is A complete framework with elegant MVC architecture, Default Ivy renderer,faster build with compilation, large community support, great documenatation and easy to build single page application with different components. 
 
