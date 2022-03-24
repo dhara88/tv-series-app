@@ -14,24 +14,30 @@ export class DashboardComponent implements OnInit {
   isLoadingIndicator: boolean = false;
   hasError: boolean = false;
   searchResults: any = [];
-  genre : any = ['Action','Comedy','Drama','Sports'];
   debounce:any;
+  showListByGenre:any = [];
+
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.getAllShows();  
   }
   
-  filterDataByGenre(genre: string): Shows[] {
-    return this.allShowsData.filter(itemVal => itemVal.genres.indexOf(genre) >= 0);
+  filterDataByGenre(allShowsData:any){
+    return [...new Set(allShowsData.map((show:any)=> show.genres).flat())].sort();
   }
-
   getAllShows() {
     this.isLoadingIndicator = true;
     this.apiService.getAllTVSeries().subscribe(
       (data: Shows[]) => {
         this.allShowsData = data;
-        this.allShowsData.sort((a, b) => a.rating.average > b.rating.average ? -1 : 1);
+        const uniqueGenreArr = this.filterDataByGenre(this.allShowsData);
+         this.showListByGenre = uniqueGenreArr.map((genre:any)=>{
+          const shows = this.allShowsData
+          .filter(show =>show.genres.includes(genre))
+          .sort((a, b) => a.rating.average > b.rating.average ? -1 : 1);
+          return {genre,shows}
+        })
         this.hasError = false;
       },
       (error) => {
